@@ -1,0 +1,38 @@
+{
+    "Records": [
+      {
+        "messageId": "6441f4eb-44ff-4aba-998b-9be27b1589f7",
+        "receiptHandle": "AQEBxGs36NvKc9IEY1uPpXoQANtYS6yVT903ggcD+pPrOdpuyGXkqijECftpMfRmjmJx9Q7SErmMNd9NGXI/CfavPBoRCHaIez9YksJA36aaXy4p31mQx+HwYCYG0yPAciv8V4WrSgUaJq+Z9/NwI25jha3Kw8Jd/3rxkri0PtvFtKqM4dspDiqjLNEZ/qtyR6+oVp6J114OCxx4O0+Zz47MDxWGsOatcZyBFeR6Oj0swfLH7McsPTsntXQLXmFJrhTlqJyatS3TH8FMFJPqvAYV4sW85AhJ3c6P6YozaZmjEDMaTGMHwucndesNYdE4GGeTWE8AMvByBc+0cMpi9dALe+EqagaktHxaj8h9DlxNfJEGdEOJraE4mtC/t93Z46NE7v6LygyIhWnAIWYSYcYEIg==",
+        "body": "{\n  \"Type\" : \"Notification\",\n  \"MessageId\" : \"5f96e186-5546-5c0b-9393-bf2a39dcdc2d\",\n  \"TopicArn\" : \"arn:aws:sns:us-east-1:287820185021:openaq-simulator\",\n  \"Message\" : \"{\\\"locationId\\\": 7215, \\\"location\\\": \\\"Cornimont\\\", \\\"parameter\\\": \\\"no2\\\", \\\"value\\\": 13.3987, \\\"date\\\": {\\\"utc\\\": \\\"2024-05-01 16:55:36.296077\\\", \\\"local\\\": \\\"2024-05-01 16:55:36.296077+02:00\\\"}, \\\"unit\\\": \\\"\\\\u00b5g/m\\\\u00b3\\\", \\\"coordinates\\\": {\\\"latitude\\\": 49.8622424, \\\"longitude\\\": 4.9983726}, \\\"country\\\": \\\"BE\\\", \\\"city\\\": \\\"Cornimont\\\", \\\"isMobile\\\": true, \\\"isAnalysis\\\": false, \\\"entity\\\": \\\"player\\\", \\\"sensorType\\\": \\\"low-cost\\\"}\",\n  \"Timestamp\" : \"2024-05-01T16:14:18.159Z\",\n  \"SignatureVersion\" : \"1\",\n  \"Signature\" : \"f7s5fzDvxMtxhoXO96ngYp5LAMDeonjLo+MP31OW3FL+ZCU3caz5e77ZLMpYRf3eMW7p/4Gh7MhX2053um8ykXcFQZ/XioF7UxV/0TJo/DTp627G1UA2sUgUhcVGrYpFqHaqg9wGZVfdshYOn5y2NKy1Qsm96jl+caicvWuI3VXms5YqMu97ZooTHPLYLBuUH5yGTCbfyt6FMXATo7Y/ifUBhnV9RXrxQxmQl4WlJn7Hrb8GYDJNEK+jBy+dKGrbFD0Q6c78mxWC/3lPCb02Ib1mKUlcODte9OWGajnkaeWQU93RrSwdebn20jWGCyTixVZGebSBh+HW3rZB+T9oiA==\",\n  \"SigningCertURL\" : \"https://sns.us-east-1.amazonaws.com/SimpleNotificationService-60eadc530605d63b8e62a523676ef735.pem\",\n  \"UnsubscribeURL\" : \"https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:287820185021:openaq-simulator:e53d286e-f3b9-4055-9a02-c42eac0ae4bd\"\n}",
+        "attributes": {
+          "ApproximateReceiveCount": "3",
+          "AWSTraceHeader": "Root=1-66326a31-2a7c271a1143164d65c8316b;Parent=7619289f3844667c;Sampled=0;Lineage=41a1d4da:0",
+          "SentTimestamp": "1714580058213",
+          "SenderId": "AIDAIT2UOQQY3AUEKVGXU",
+          "ApproximateFirstReceiveTimestamp": "1714674286096"
+        },
+        "messageAttributes": {},
+        "md5OfBody": "59fa8a521cf9c76ef8feabd2d285f4fa",
+        "eventSource": "aws:sqs",
+        "eventSourceARN": "arn:aws:sqs:eu-west-1:287820185021:openaq-thomasn",
+        "awsRegion": "eu-west-1"
+      },
+      {
+        "messageId": "f78216c8-52f7-431f-a089-5b5a68a14661",
+        "receiptHandle": "AQEB9BNAwZxw8/YaaPnxbs3b4zZw4yqXzrLJXvC93lBaEb097ZkPyFy9nurZyzzvoCK9rGX9HLwLmMchD8NwLvJTmr4qktwXAWlFkE7giSJ8IEMsFd3TcDuoqMQHm4zldf4o9IHX2OhHG0jNgat6CQlUk+p3rTBiSVKUTO77+AlAXjOJJukMyBh+kOmi4LqADCOUSoXlSEptFHTXAMmWEcrcHmC0/7Xag+dnJVNRCAX0+cEtHW1C+tZzbcFVgufZ4EF+UaY1PDYmt+QoGHppjDnehgcd3/2JkifAvyrgSYT33lpxykssv8JN2Zb/Z4nwioEVsSb5DQqwWufr1VEY5LZVw5nRDLQgKg0Q/70Hb62m/CPmAXIfcd6KNbBh1pvwfEJ26xYCXmJS7tmXxo7rOXEtBw==",
+        "body": "{\n  \"Type\" : \"Notification\",\n  \"MessageId\" : \"2aab7757-5425-5c12-85fd-29fb38bfec34\",\n  \"TopicArn\" : \"arn:aws:sns:us-east-1:287820185021:openaq-simulator\",\n  \"Message\" : \"{\\\"locationId\\\": 4344, \\\"location\\\": \\\"Sart-Custinne\\\", \\\"parameter\\\": \\\"so2\\\", \\\"value\\\": 94.958, \\\"date\\\": {\\\"utc\\\": \\\"2024-05-01 16:53:05.296431\\\", \\\"local\\\": \\\"2024-05-01 16:53:05.296431+02:00\\\"}, \\\"unit\\\": \\\"\\\\u00b5g/m\\\\u00b3\\\", \\\"coordinates\\\": {\\\"latitude\\\": 50.00147, \\\"longitude\\\": 4.91675}, \\\"country\\\": \\\"BE\\\", \\\"city\\\": \\\"Sart-Custinne\\\", \\\"isMobile\\\": true, \\\"isAnalysis\\\": false, \\\"entity\\\": \\\"fish\\\", \\\"sensorType\\\": \\\"low-cost\\\"}\",\n  \"Timestamp\" : \"2024-05-01T16:14:18.399Z\",\n  \"SignatureVersion\" : \"1\",\n  \"Signature\" : \"Yk18IK8SiUCjQirRGwNALeYdv38/MC1xMF5lF7bIW35+hhG/ElSQMT/ZDTA2xBjanKPLsrKVKw+IGMxFaLOzqUmYMT1XM9/8PHCkGCuC1oku1TyHTss3ox4pJXkAvWPH67lOgeXcZXC6mKNyLhXibWTMR2eELdnj1Rhkpt2c1qo0id/CN5vr2riOMR2cF+VNMOXLo1o/7nbok0G77bOl/YeVpXgjOSkLwE+JZukboac3O91p0bx8DK+e/8N11ZZ2/y018k0DGxP03pTaMbwwvE4JxG1/LDAFpQjJ30sfl6mjSA97FKQEK+RowUb7GCsvaVM0ERsCt4UyaacVqYDMdQ==\",\n  \"SigningCertURL\" : \"https://sns.us-east-1.amazonaws.com/SimpleNotificationService-60eadc530605d63b8e62a523676ef735.pem\",\n  \"UnsubscribeURL\" : \"https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:287820185021:openaq-simulator:e53d286e-f3b9-4055-9a02-c42eac0ae4bd\"\n}",
+        "attributes": {
+          "ApproximateReceiveCount": "3",
+          "AWSTraceHeader": "Root=1-66326a31-2a7c271a1143164d65c8316b;Parent=7619289f3844667c;Sampled=0;Lineage=41a1d4da:0",
+          "SentTimestamp": "1714580058449",
+          "SenderId": "AIDAIT2UOQQY3AUEKVGXU",
+          "ApproximateFirstReceiveTimestamp": "1714674286096"
+        },
+        "messageAttributes": {},
+        "md5OfBody": "308beeac220412c2221e09aa301cbcf3",
+        "eventSource": "aws:sqs",
+        "eventSourceARN": "arn:aws:sqs:eu-west-1:287820185021:openaq-thomasn",
+        "awsRegion": "eu-west-1"
+      }
+    ]
+  }
