@@ -1,0 +1,4 @@
+**.zip
+dash-map/.env
+dash-map/.mapbox_token
+openaq-ingest/template.yaml
