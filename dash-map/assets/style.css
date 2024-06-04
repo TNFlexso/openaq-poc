@@ -1,1 +1,5 @@
 html { font-family: Futura, Helvetica, Arial, sans-serif }
+
+.col label {
+    margin-right: 10px;
+}

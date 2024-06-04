@@ -21,7 +21,7 @@ app.layout = html.Div([
     html.H1("Air quality measurements"),
     html.Div([
         dbc.Row([
-            dbc.Label("Parameter", html_for="parameter", width=2),
+            dbc.Label("Parameter:", html_for="parameter", width=2),
             dbc.Col(
                 dcc.RadioItems(id='parameter', inline=True, options=[
                 {'label': 'Particles <= 10µm', 'value': 'pm10'},
@@ -30,11 +30,11 @@ app.layout = html.Div([
                 {'label': 'Sulfur dioxide (So²)', 'value': 'so2'},
                 {'label': 'Nitrogen dioxide (No²)', 'value': 'no2'},
                 {'label': 'Ozone', 'value': 'o3'},],
-                value='pm10', style={'margin-bottom': '10px'}),
+                value='pm10', style={'margin-bottom': '20px'}),
             )
         ]),
         dbc.Row([
-            dbc.Label("Time interval", html_for="hours", width=2),
+            dbc.Label("Time interval:", html_for="hours", width=2),
             dbc.Col(
                 dcc.Slider(0, 24, 3, value=3, id='hours')
             )
@@ -55,19 +55,18 @@ px.set_mapbox_access_token(open(".mapbox_token").read())
 )
 
 def update_map(parameter, hours):
-    db_data = con.run("""SELECT r.location_id, 
-                      l.location, 
-                      r.parameter, 
-                      r.unit, 
-                      l.lat::numeric AS lat, 
-                      l.lon::numeric AS lon, 
-                      avg(r.value) AS avg, 
-                      concat(to_char(avg(r.value), 'FM999.99'::text), ' ', r.unit) AS reading, 
-                      count(r.value) as nmbr_readings 
-                      FROM \"Readings\" r JOIN \"Locations\" l ON r.location_id = l.id 
-                      WHERE parameter = :p 
-                      AND timestamp >= now() - INTERVAL '"""+ str(hours) + """ hours' 
-                      GROUP BY r.location_id, l.location, r.parameter, r.unit, l.lat, l.lon""",
+    db_data = con.run("""SELECT l.location, 
+                                r.parameter, 
+                                r.unit, 
+                                l.lat::numeric AS lat, 
+                                l.lon::numeric AS lon, 
+                                avg(r.value) AS avg, 
+                                concat(to_char(avg(r.value), 'FM999.99'::text), ' ', r.unit) AS reading, 
+                                count(r.value) as nmbr_readings 
+                            FROM \"Readings\" r JOIN \"Locations\" l ON r.location_id = l.id 
+                            WHERE parameter = :p 
+                                AND timestamp >= now() - INTERVAL '"""+ str(hours) + """ hours' 
+                            GROUP BY l.location, r.parameter, r.unit, l.lat, l.lon""",
                       p=parameter)
     df = pd.DataFrame(db_data, columns=[c['name'] for c in con.columns])
     fig = px.scatter_mapbox(df, hover_name="location", custom_data=["location","reading", "nmbr_readings"],lat="lat", lon="lon", color="avg", color_continuous_scale=px.colors.diverging.RdYlGn_r, zoom=7, )
